@@ -10,10 +10,12 @@ export interface Recipe {
   category: 'veg' | 'non-veg';
   description: string;
 }
+import { VegComponent } from './veg/veg.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, VegComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

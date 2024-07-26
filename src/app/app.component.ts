@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { VegComponent } from './veg/veg.component';
 import { AddrecipieComponent } from './addrecipie/addrecipie.component';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +23,7 @@ export interface Recipe {
     AddrecipieComponent,
     HomeComponent,
     NonvegComponent,
+    RouterLink,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

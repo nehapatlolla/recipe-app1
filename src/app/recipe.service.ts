@@ -27,6 +27,8 @@ export class RecipeService {
       timetaken: '15 minutes',
       type: 'Main Course',
       rating: 4.5,
+      poster:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5igQTy4xBK0yhNXVAJU_1NAOsKAdKcqB5dw&s',
     },
     {
       title: 'Chickpea Salad',
@@ -49,6 +51,8 @@ export class RecipeService {
       timetaken: '10 minutes',
       type: 'Salad',
       rating: 4.8,
+      poster:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMdtdbrByR_82n-ELyELB1kHGyB4k7NVrcow&s',
     },
     {
       title: 'Vegetarian Chili',
@@ -76,7 +80,10 @@ export class RecipeService {
       timetaken: '30 minutes',
       type: 'Main Course',
       rating: 4.7,
+      poster:
+        'https://images.immediate.co.uk/production/volatile/sites/30/2022/10/Vegetarian-chilli-206c469.jpg?resize=768,574',
     },
+
     {
       title: 'Spinach and Feta Stuffed Mushrooms',
       ingredients: [
@@ -99,6 +106,8 @@ export class RecipeService {
       timetaken: '25 minutes',
       type: 'Appetizer',
       rating: 4.6,
+      poster:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC4V5FV5Z9rWGY2s-VXw9VIbr3CPtVF4aLaA&s',
     },
     {
       title: 'Lentil Soup',
@@ -126,6 +135,8 @@ export class RecipeService {
       timetaken: '40 minutes',
       type: 'Soup',
       rating: 4.4,
+      poster:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTwiwE3eGMsi3i-KSa2hzdolSWCEmSWGAg6w&s',
     },
     {
       title: 'Stuffed Bell Peppers',
@@ -151,6 +162,8 @@ export class RecipeService {
       timetaken: '45 minutes',
       type: 'Main Course',
       rating: 4.6,
+      poster:
+        'https://www.allrecipes.com/thmb/eBsB2933MCuNVCim4O-AyCR97YE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79805-StuffedPeppersWithturkeyAndVegtables-MFS-2x3-0048-444ecb49b0184daab29e5326e4330af3.jpg',
     },
     {
       title: 'Sweet Potato and Black Bean Tacos',
@@ -174,6 +187,8 @@ export class RecipeService {
       timetaken: '35 minutes',
       type: 'Main Course',
       rating: 4.7,
+      poster:
+        'https://joyfoodsunshine.com/wp-content/uploads/2018/01/vegetarian-black-bean-sweet-potato-tacos-13.jpg',
     },
     {
       title: 'Cauliflower Curry',
@@ -201,6 +216,8 @@ export class RecipeService {
       timetaken: '30 minutes',
       type: 'Main Course',
       rating: 4.5,
+      poster:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd_C5TDMnJS-U2NFqJFkXV-2lf1kP0JpkguA&s',
     },
     {
       title: 'Chicken Alfredo',
@@ -225,8 +242,10 @@ export class RecipeService {
         'Top with sliced chicken and garnish with chopped parsley before serving.',
       ],
       timetaken: '30 minutes',
-      type: 'Main Course',
+      type: 'Non-Veg',
       rating: 4.6,
+      poster:
+        'https://carlsbadcravings.com/wp-content/uploads/2022/04/chicken-fettuccine-alfredo-6a.jpg',
     },
     {
       title: 'Beef Tacos',
@@ -251,8 +270,10 @@ export class RecipeService {
         'Serve the beef mixture in taco shells or tortillas with your choice of toppings.',
       ],
       timetaken: '20 minutes',
-      type: 'Main Course',
+      type: 'Non-Veg',
       rating: 4.7,
+      poster:
+        'https://www.fromvalerieskitchen.com/wordpress/wp-content/uploads/2023/08/Shredded-Beef-Tacos-19.jpg',
     },
     {
       title: 'Garlic Butter Shrimp',
@@ -273,8 +294,10 @@ export class RecipeService {
         'Serve with lemon wedges.',
       ],
       timetaken: '15 minutes',
-      type: 'Appetizer',
+      type: 'Non-Veg',
       rating: 4.8,
+      poster:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwtg76-NSXo42bZWry0uc-K2qvg9-y7JTDjQ&s',
     },
     {
       title: 'Honey Mustard Glazed Salmon',
@@ -295,8 +318,10 @@ export class RecipeService {
         'Bake for 12-15 minutes, or until the salmon flakes easily with a fork.',
       ],
       timetaken: '20 minutes',
-      type: 'Main Course',
+      type: 'Non-Veg',
       rating: 4.7,
+      poster:
+        'https://www.halfbakedharvest.com/wp-content/uploads/2023/01/Sheet-Pan-Honey-Mustard-Salmon-with-Caesar-Roasted-Potatoes-5.jpg',
     },
     {
       title: 'Chicken Caesar Salad',
@@ -318,6 +343,8 @@ export class RecipeService {
       timetaken: '20 minutes',
       type: 'Salad',
       rating: 4.6,
+      poster:
+        'https://www.halfbakedharvest.com/wp-content/uploads/2022/07/Buffalo-Ranch-Pretzel-Chicken-Caesar-Salad-1.jpg',
     },
     {
       title: 'Pork Schnitzel',
@@ -343,6 +370,8 @@ export class RecipeService {
       timetaken: '40 minutes',
       type: 'Main Course',
       rating: 4.5,
+      poster:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0k7OateHdr_JPhwuEvxrs5uIrMpzeHddkbw&s',
     },
   ];
 

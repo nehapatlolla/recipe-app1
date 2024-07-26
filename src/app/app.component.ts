@@ -12,11 +12,12 @@ export interface Recipe {
 }
 import { VegComponent } from './veg/veg.component';
 import { AddrecipieComponent } from './addrecipie/addrecipie.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, VegComponent, AddrecipieComponent],
+  imports: [RouterOutlet, VegComponent, AddrecipieComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

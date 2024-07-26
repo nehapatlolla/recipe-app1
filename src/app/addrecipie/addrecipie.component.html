@@ -3,20 +3,23 @@
     <mat-label>Recipie Name</mat-label>
     <input matInput place-holder="Name" [(ngModel)]="name" />
   </mat-form-field>
-
   <mat-form-field>
     <mat-label>poster</mat-label>
-    <input matInput place-holder="text" [(ngModel)]="poster" />
+    <input matInput place-holder="" [(ngModel)]="poster" />
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Rating</mat-label>
-    <input matInput place-holder="text" [(ngModel)]="Rating" />
+    <input matInput place-holder="text" [(ngModel)]="rating" />
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Steps</mat-label>
-    <input matInput place-holder="text" [(ngModel)]="Steps" />
+    <input matInput place-holder="text" [(ngModel)]="steps" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Ingredients</mat-label>
+    <input matInput place-holder="text" [(ngModel)]="ingredients" />
   </mat-form-field>
 
   <button mat-raised-button (click)="addrecipie()">Add Recipie</button>

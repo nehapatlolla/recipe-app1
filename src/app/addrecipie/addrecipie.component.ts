@@ -19,5 +19,13 @@ import { MatInputModule } from '@angular/material/input';
   styleUrl: './addrecipie.component.scss',
 })
 export class AddrecipieComponent {
+  name: string = '';
+  poster = '';
+  steps = '';
+  ingredients = '';
+  timetaken = '';
+  type = '';
+
+  rating = 0;
   addrecipie() {}
 }

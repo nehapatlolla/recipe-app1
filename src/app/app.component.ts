@@ -8,11 +8,10 @@ import { NonvegComponent } from './nonveg/nonveg.component';
 export interface Recipe {
   title: string;
   timeTaken: string;
-  imageUrl: string;
-  ingredients: Array<string>;
-  procedure: Array<string>;
-  rating: number;
-  description: string;
+  poster: string;
+  ingredients: string;
+  procedure: string;
+  type: string;
 }
 
 @Component({

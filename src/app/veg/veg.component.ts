@@ -90,4 +90,5 @@ export class VegComponent {
   clickmethods() {
     this.shown = !this.shown;
   }
+  addrecipie() {}
 }

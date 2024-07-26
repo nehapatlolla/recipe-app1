@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 import { VegComponent } from '../veg/veg.component';
 
@@ -10,8 +10,8 @@ import { VegComponent } from '../veg/veg.component';
   styleUrl: './nonveg.component.scss',
 })
 export class NonvegComponent {
-  RecipeList: any;
-  constructor(private recipeService: RecipeService) {
-    this.RecipeList = this.recipeService.getrecipes();
-  }
+  @Input() RecipeList: any;
+  // constructor(private recipeService: RecipeService) {
+  //   this.RecipeList = this.recipeService.getrecipes();
+  // }
 }

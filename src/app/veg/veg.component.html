@@ -1,27 +1,27 @@
 <div class="Veg">
-  <img src="{{ recipe.image }}" alt="img" class="image" />
+  <img src="{{ recipes.imageUrl }}" alt="img" class="image" />
   <div class="flex">
     <div class="flex1">
-      <h3>{{ recipe.title }}</h3>
+      <h3>{{ recipes.title }}</h3>
 
       <button (click)="clickmethod()" mat-stroked-button>Description</button>
       <button (click)="clickmethods()" mat-stroked-button>ingredients</button>
     </div>
-    <h4>⭐{{ recipe.rating }}</h4>
+    <h4>⭐{{ recipes.rating }}</h4>
   </div>
-  <h4>{{ recipe.timetaken }}</h4>
-  <h4>{{ recipe.type }}</h4>
+  <h4>{{ recipes.timeTaken }}</h4>
+  <h4>{{ recipes.type }}</h4>
 
   <div class="button"></div>
 
   @if(show) {
   <div class="summary">
-    <p>{{ recipe.procedure }}</p>
+    <p>{{ recipes.procedure }}</p>
   </div>
 
   } @if(shown) {
   <div class="summary">
-    <p>{{ recipe.ingredients }}</p>
+    <p>{{ recipes.ingredients }}</p>
   </div>
   }
 </div>

@@ -36,8 +36,13 @@ export class VegComponent {
     type: 'Main Course',
     rating: 4.6,
   };
-  show: boolean = true;
+  show: boolean = false;
   clickmethod() {
     this.show = !this.show;
+  }
+
+  shown: boolean = false;
+  clickmethods() {
+    this.shown = !this.shown;
   }
 }

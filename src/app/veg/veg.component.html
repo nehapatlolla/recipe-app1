@@ -3,7 +3,9 @@
   <div class="flex">
     <div class="flex1">
       <h3>{{ recipe.title }}</h3>
+
       <button (click)="clickmethod()" mat-stroked-button>Description</button>
+      <button (click)="clickmethods()" mat-stroked-button>ingredients</button>
     </div>
     <h4>⭐{{ recipe.rating }}</h4>
   </div>
@@ -15,6 +17,11 @@
   @if(show) {
   <div class="summary">
     <p>{{ recipe.procedure }}</p>
+  </div>
+
+  } @if(shown) {
+  <div class="summary">
+    <p>{{ recipe.ingredients }}</p>
   </div>
   }
 </div>

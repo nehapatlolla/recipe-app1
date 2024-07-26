@@ -1,16 +1,21 @@
-<!-- <div class="Veg">
-  <img src="{{ }}" alt="img" class="image" />
+<div class="Veg">
+  <img src="{{ recipe.image }}" alt="img" class="image" />
   <div class="flex">
-    <h3>{{ name }}</h3>
-    <h4>⭐{{ rating }}</h4>
+    <div class="flex1">
+      <h3>{{ recipe.title }}</h3>
+      <button (click)="clickmethod()" mat-stroked-button>Description</button>
+    </div>
+    <h4>⭐{{ recipe.rating }}</h4>
   </div>
-  <div class="button">
-    <button (click)="clickmethod()" mat-stroked-button>Toggle Button</button>
-  </div>
+  <h4>{{ recipe.timetaken }}</h4>
+  <h4>{{ recipe.type }}</h4>
+
+  <div class="button"></div>
+
   @if(show) {
   <div class="summary">
-    <p>{{ moviee.summary }}</p>
-    }
+    <p>{{ recipe.procedure }}</p>
   </div>
-</div> -->
-<h1>works</h1>
+  }
+</div>
+<!-- <h1>works</h1> -->

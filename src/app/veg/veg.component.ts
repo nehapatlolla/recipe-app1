@@ -52,7 +52,7 @@ export class VegComponent {
   recipes = {
     title: '',
     timeTaken: '',
-    imageUrl: '',
+    poster: '',
     ingredients: Array<string>,
     rating: 0,
     procedure: Array<string>,

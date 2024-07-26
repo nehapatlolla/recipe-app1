@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { VegComponent } from './veg/veg.component';
+import { AddrecipieComponent } from './addrecipie/addrecipie.component';
+import { HomeComponent } from './home/home.component';
+import { NonvegComponent } from './nonveg/nonveg.component';
+
 export interface Recipe {
   title: string;
   timeTaken: string;
@@ -9,10 +14,6 @@ export interface Recipe {
   rating: number;
   description: string;
 }
-import { VegComponent } from './veg/veg.component';
-import { AddrecipieComponent } from './addrecipie/addrecipie.component';
-import { HomeComponent } from './home/home.component';
-import { NonvegComponent } from './nonveg/nonveg.component';
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,15 @@
+<div class="Veg">
+  <img src="{{ }}" alt="img" class="image" />
+  <div class="flex">
+    <h3>{{ name }}</h3>
+    <h4>⭐{{ rating }}</h4>
+  </div>
+  <div class="button">
+    <button (click)="clickmethod()" mat-stroked-button>Toggle Button</button>
+  </div>
+  @if(show) {
+  <div class="summary">
+    <p>{{ moviee.summary }}</p>
+    }
+  </div>
+</div>

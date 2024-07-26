@@ -347,4 +347,15 @@ export class RecipeService {
   ];
 
   constructor() {}
+
+  getrecipes() {
+    return this.ReciepsList;
+  }
+  addrecipie(recipe: any) {
+    this.ReciepsList.push(recipe);
+  }
+  deleterecipie(recipe: any) {
+    let idx = this.ReciepsList.indexOf(recipe);
+    this.ReciepsList.splice(idx, 1);
+  }
 }

@@ -22,5 +22,19 @@
 {
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+.typeDelete
+{
+    display: flex;
+    justify-content: space-between;
+}
+.icons
+{
+    margin-top: 20px;
+    
+}
+.type
+{
+  margin-top: 5px;
 }

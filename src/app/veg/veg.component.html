@@ -3,17 +3,40 @@
   <div class="flex">
     <div class="flex1">
       <h3>{{ recipes.title }}</h3>
+      <div class="icons">
+        <mat-icon
+          (click)="clickmethod()"
+          color="primary"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon=" unfold_more
+          "
+        ></mat-icon>
 
-      <button (click)="clickmethod()" mat-stroked-button>Description</button>
-      <button (click)="clickmethods()" mat-stroked-button>ingredients</button>
+        <mat-icon
+          (click)="clickmethods()"
+          color="primary"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon=" unfold_more
+          "
+        ></mat-icon>
+      </div>
     </div>
-    <h4>⭐{{ recipes.rating }}</h4>
+    <h3>⭐{{ recipes.rating }}</h3>
   </div>
   <h4>{{ recipes.timeTaken }}</h4>
-  <h4>Type: {{ recipes.type }}</h4>
-
+  <div class="typeDelete">
+    <h4 class="type">Type: {{ recipes.type }}</h4>
+    <mat-icon
+      (click)="deleteRecioe()"
+      color="primary"
+      aria-hidden="false"
+      aria-label="delete icon"
+      fontIcon="delete"
+    ></mat-icon>
+  </div>
   <div class="button"></div>
-
   @if(show) {
   <div class="summary">
     <p>{{ recipes.procedure }}</p>

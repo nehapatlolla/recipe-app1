@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-addrecipie',
@@ -19,14 +20,25 @@ import { MatInputModule } from '@angular/material/input';
   styleUrl: './addrecipie.component.scss',
 })
 export class AddrecipieComponent {
-  name: string = '';
-  poster = '';
-  steps = '';
-  ingredients = '';
-  timetaken = '';
-  type = '';
-
-  rating = 0;
-
-  addrecipie() {}
+  recipeList: any;
+  name: any;
+  poster: any;
+  rating: any;
+  steps: any;
+  ingredients: any;
+  obj = {
+    name: '',
+    poster: '',
+    steps: '',
+    ingredients: '',
+    timetaken: '',
+    type: '',
+    rating: 0,
+  };
+  constructor(private recipeService: RecipeService) {
+    this.recipeList = this.recipeService.getrecipes();
+  }
+  addrecipie() {
+    this.recipeService.addrecipie(this.obj);
+  }
 }

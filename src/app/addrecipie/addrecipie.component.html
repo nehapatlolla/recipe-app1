@@ -1,25 +1,25 @@
 <div class="add-recipie-form">
   <mat-form-field>
     <mat-label>Recipie Name</mat-label>
-    <input matInput place-holder="Name" [(ngModel)]="name" />
+    <input matInput place-holder="Name" [(ngModel)]="obj.name" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>poster</mat-label>
-    <input matInput place-holder="" [(ngModel)]="poster" />
+    <input matInput place-holder="" [(ngModel)]="obj.poster" />
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Rating</mat-label>
-    <input matInput place-holder="text" [(ngModel)]="rating" />
+    <input matInput place-holder="text" [(ngModel)]="obj.rating" />
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>Steps</mat-label>
-    <input matInput place-holder="text" [(ngModel)]="steps" />
+    <input matInput place-holder="text" [(ngModel)]="obj.steps" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Ingredients</mat-label>
-    <input matInput place-holder="text" [(ngModel)]="ingredients" />
+    <input matInput place-holder="text" [(ngModel)]="obj.ingredients" />
   </mat-form-field>
 
   <button mat-raised-button (click)="addrecipie()">Add Recipie</button>

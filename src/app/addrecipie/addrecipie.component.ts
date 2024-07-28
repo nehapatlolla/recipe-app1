@@ -27,5 +27,6 @@ export class AddrecipieComponent {
   type = '';
 
   rating = 0;
+
   addrecipie() {}
 }

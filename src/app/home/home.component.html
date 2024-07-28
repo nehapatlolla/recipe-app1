@@ -1,5 +1,13 @@
-<div>
-  <label for="site-search">Search the site:</label>
-  <input type="search" id="site-search" name="q" />
-  <button>Search</button>
+<div class="mainclass">
+  <h2>Recipe Search</h2>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Search Recipes"
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()"
+    />
+  </mat-form-field>
+
+  <app-nonveg [RecipeList]="filteredRecipes" />
 </div>

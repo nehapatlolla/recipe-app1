@@ -378,6 +378,7 @@ export class RecipeService {
   constructor() {}
 
   getrecipes() {
+    console.log('adding....');
     return this.ReciepsList;
   }
   addrecipie(recipe: any) {

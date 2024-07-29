@@ -3,28 +3,14 @@
   <div class="flex">
     <div class="flex1">
       <h3>{{ recipes.title }}</h3>
-      <div class="icons">
-        <mat-icon
-          (click)="clickmethod()"
-          color="primary"
-          aria-hidden="false"
-          aria-label="Example home icon"
-          fontIcon=" unfold_more
-          "
-        ></mat-icon>
-
-        <!-- <mat-icon
-          (click)="clickmethods()"
-          color="primary"
-          aria-hidden="false"
-          aria-label="Example home icon"
-          >Ingredients</mat-icon
-        > -->
-        <button (click)="clickmethods()" mat-raised-button>Ingredients</button>
-      </div>
     </div>
     <h3>⭐{{ recipes.rating }}</h3>
   </div>
+  <div class="buttons" style="display: flex; justify-content: space-between">
+    <button mat-raised-button (click)="clickmethod()">Procedure</button>
+    <button mat-raised-button (click)="clickmethods()">Ingredients</button>
+  </div>
+
   <h4>{{ recipes.timeTaken }}</h4>
   <div class="typeDelete">
     <h4 class="type">Type: {{ recipes.type }}</h4>

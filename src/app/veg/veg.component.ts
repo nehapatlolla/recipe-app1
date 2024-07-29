@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { Recipe } from '../app.component';
 import { RecipeService } from '../recipe.service';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-veg',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [MatIconModule, MatButtonModule],
   templateUrl: './veg.component.html',
   styleUrl: './veg.component.scss',
 })

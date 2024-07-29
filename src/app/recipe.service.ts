@@ -28,7 +28,7 @@ export class RecipeService {
       timetaken: '15 minutes',
       type: 'Main Course',
       rating: 4.5,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5igQTy4xBK0yhNXVAJU_1NAOsKAdKcqB5dw&s',
     },
@@ -53,7 +53,7 @@ export class RecipeService {
       timetaken: '10 minutes',
       type: 'Salad',
       rating: 4.8,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMdtdbrByR_82n-ELyELB1kHGyB4k7NVrcow&s',
     },
@@ -83,7 +83,7 @@ export class RecipeService {
       timetaken: '30 minutes',
       type: 'Main Course',
       rating: 4.7,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://images.immediate.co.uk/production/volatile/sites/30/2022/10/Vegetarian-chilli-206c469.jpg?resize=768,574',
     },
@@ -109,7 +109,7 @@ export class RecipeService {
       timetaken: '25 minutes',
       type: 'Appetizer',
       rating: 4.6,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC4V5FV5Z9rWGY2s-VXw9VIbr3CPtVF4aLaA&s',
     },
@@ -139,7 +139,7 @@ export class RecipeService {
       timetaken: '40 minutes',
       type: 'Soup',
       rating: 4.4,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTwiwE3eGMsi3i-KSa2hzdolSWCEmSWGAg6w&s',
     },
@@ -167,7 +167,7 @@ export class RecipeService {
       timetaken: '45 minutes',
       type: 'Main Course',
       rating: 4.6,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://www.allrecipes.com/thmb/eBsB2933MCuNVCim4O-AyCR97YE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79805-StuffedPeppersWithturkeyAndVegtables-MFS-2x3-0048-444ecb49b0184daab29e5326e4330af3.jpg',
     },
@@ -193,7 +193,7 @@ export class RecipeService {
       timetaken: '35 minutes',
       type: 'Main Course',
       rating: 4.7,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://joyfoodsunshine.com/wp-content/uploads/2018/01/vegetarian-black-bean-sweet-potato-tacos-13.jpg',
     },
@@ -223,7 +223,7 @@ export class RecipeService {
       timetaken: '30 minutes',
       type: 'Main Course',
       rating: 4.5,
-      category: 'Veg', // Added category
+      category: 'Veggie', // Added category
       poster:
         'https://thealmondeater.com/wp-content/uploads/2022/02/Cauliflower-Curry_web-7.jpg',
     },
@@ -397,7 +397,7 @@ export class RecipeService {
       timetaken: '30 minutes',
       type: 'Main Course',
       rating: 4.6,
-      category: 'Veg',
+      category: 'Veggie',
       poster:
         'https://www.indianveggiedelight.com/wp-content/uploads/2017/10/palak-paneer-recipe-featured.jpg',
     },
@@ -428,7 +428,7 @@ export class RecipeService {
       timetaken: '40 minutes',
       type: 'Main Course',
       rating: 4.8,
-      category: 'Veg',
+      category: 'Veggie',
       poster:
         'https://www.eatingwell.com/thmb/Kx41aHMgb9iAY41IM5eSrQi-3O8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chickpea-curry-chhole-1x1-41ea4d53c7df4fddabd83caa5b57718e.jpg',
     },
@@ -490,7 +490,7 @@ export class RecipeService {
       timetaken: '35 minutes',
       type: 'Main Course',
       rating: 4.5,
-      category: 'Veg',
+      category: 'Veggie',
       poster:
         'https://www.cookclickndevour.com/wp-content/uploads/2020/10/aloo-gobi-recipe.jpg',
     },

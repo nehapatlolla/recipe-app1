@@ -26,6 +26,7 @@ export class VegComponent {
     procedure: Array<string>,
     description: '',
     type: '',
+    category: '',
   };
 
   show: boolean = false;

@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class RecipeService {
   ReciepsList = [
+    // src/app/food-data.ts
     {
       title: 'Vegetable Stir-Fry',
       ingredients: [
@@ -27,6 +28,7 @@ export class RecipeService {
       timetaken: '15 minutes',
       type: 'Main Course',
       rating: 4.5,
+      category: 'Veg', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5igQTy4xBK0yhNXVAJU_1NAOsKAdKcqB5dw&s',
     },
@@ -51,6 +53,7 @@ export class RecipeService {
       timetaken: '10 minutes',
       type: 'Salad',
       rating: 4.8,
+      category: 'Veg', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMdtdbrByR_82n-ELyELB1kHGyB4k7NVrcow&s',
     },
@@ -80,10 +83,10 @@ export class RecipeService {
       timetaken: '30 minutes',
       type: 'Main Course',
       rating: 4.7,
+      category: 'Veg', // Added category
       poster:
         'https://images.immediate.co.uk/production/volatile/sites/30/2022/10/Vegetarian-chilli-206c469.jpg?resize=768,574',
     },
-
     {
       title: 'Spinach and Feta Stuffed Mushrooms',
       ingredients: [
@@ -106,6 +109,7 @@ export class RecipeService {
       timetaken: '25 minutes',
       type: 'Appetizer',
       rating: 4.6,
+      category: 'Veg', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC4V5FV5Z9rWGY2s-VXw9VIbr3CPtVF4aLaA&s',
     },
@@ -135,6 +139,7 @@ export class RecipeService {
       timetaken: '40 minutes',
       type: 'Soup',
       rating: 4.4,
+      category: 'Veg', // Added category
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTwiwE3eGMsi3i-KSa2hzdolSWCEmSWGAg6w&s',
     },
@@ -162,6 +167,7 @@ export class RecipeService {
       timetaken: '45 minutes',
       type: 'Main Course',
       rating: 4.6,
+      category: 'Veg', // Added category
       poster:
         'https://www.allrecipes.com/thmb/eBsB2933MCuNVCim4O-AyCR97YE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79805-StuffedPeppersWithturkeyAndVegtables-MFS-2x3-0048-444ecb49b0184daab29e5326e4330af3.jpg',
     },
@@ -187,6 +193,7 @@ export class RecipeService {
       timetaken: '35 minutes',
       type: 'Main Course',
       rating: 4.7,
+      category: 'Veg', // Added category
       poster:
         'https://joyfoodsunshine.com/wp-content/uploads/2018/01/vegetarian-black-bean-sweet-potato-tacos-13.jpg',
     },
@@ -197,181 +204,139 @@ export class RecipeService {
         '1 onion, chopped',
         '2 cloves garlic, minced',
         '1 tablespoon ginger, minced',
-        '1 head cauliflower, cut into florets',
-        '1 can coconut milk',
-        '2 tablespoons curry powder',
+        '1 tablespoon curry powder',
         '1 teaspoon turmeric',
-        '1/2 teaspoon cumin',
-        'Salt and pepper to taste',
-        'Chopped cilantro for garnish',
+        '1 can diced tomatoes',
+        '1 cauliflower, cut into florets',
+        '1 cup coconut milk',
+        'Salt to taste',
       ],
       procedure: [
-        'Heat the vegetable oil in a large skillet over medium heat.',
-        'Add the onion, garlic, and ginger. Cook until the onion is translucent.',
-        'Add the cauliflower florets and cook for another 5 minutes.',
-        'Stir in the coconut milk, curry powder, turmeric, and cumin.',
-        'Simmer for 20 minutes, or until the cauliflower is tender.',
-        'Season with salt and pepper and garnish with chopped cilantro before serving.',
+        'Heat the vegetable oil in a large pan over medium heat.',
+        'Add the onion, garlic, and ginger, and cook until the onion is translucent.',
+        'Stir in the curry powder and turmeric, and cook for 1 minute.',
+        'Add the diced tomatoes and cauliflower florets, and stir to combine.',
+        'Pour in the coconut milk and bring to a simmer.',
+        'Cook for 20 minutes, or until the cauliflower is tender.',
+        'Season with salt before serving.',
       ],
       timetaken: '30 minutes',
       type: 'Main Course',
       rating: 4.5,
+      category: 'Veg', // Added category
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd_C5TDMnJS-U2NFqJFkXV-2lf1kP0JpkguA&s',
+        'https://www.cookingclassy.com/wp-content/uploads/2019/03/cauliflower-curry-4.jpg',
     },
     {
       title: 'Chicken Alfredo',
       ingredients: [
+        '8 oz fettuccine pasta',
         '2 tablespoons olive oil',
-        '2 boneless, skinless chicken breasts',
-        'Salt and pepper to taste',
+        '1 lb chicken breast, sliced',
         '2 cloves garlic, minced',
         '1 cup heavy cream',
         '1 cup grated Parmesan cheese',
-        '1 cup chicken broth',
-        '8 oz fettuccine pasta',
-        '2 tablespoons chopped parsley for garnish',
+        'Salt and pepper to taste',
+        '2 tablespoons chopped parsley',
       ],
       procedure: [
         'Cook the fettuccine according to package instructions. Drain and set aside.',
-        'Heat olive oil in a large skillet over medium heat. Season chicken breasts with salt and pepper.',
-        'Cook chicken in the skillet for 6-7 minutes per side, or until fully cooked. Remove from skillet and slice.',
-        'In the same skillet, add garlic and cook until fragrant.',
-        'Add heavy cream and chicken broth. Bring to a simmer and stir in Parmesan cheese until the sauce is smooth.',
-        'Add the cooked fettuccine to the sauce and toss to coat.',
-        'Top with sliced chicken and garnish with chopped parsley before serving.',
+        'Heat the olive oil in a large skillet over medium heat. Add the chicken and cook until browned and cooked through.',
+        'Add the garlic and cook for another minute.',
+        'Pour in the heavy cream and bring to a simmer.',
+        'Stir in the Parmesan cheese until melted and smooth.',
+        'Add the cooked fettuccine and toss to coat.',
+        'Season with salt and pepper, and garnish with chopped parsley before serving.',
       ],
       timetaken: '30 minutes',
-      type: 'Non-Veg',
+      type: 'Main Course',
       rating: 4.6,
+      category: 'Non-Veg', // Added category
       poster:
-        'https://carlsbadcravings.com/wp-content/uploads/2022/04/chicken-fettuccine-alfredo-6a.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCuI5rMQ5K0xTY_DjUjJjI0zdXb16aF6ZpUQ&s',
     },
     {
-      title: 'Beef Tacos',
+      title: 'Beef Stroganoff',
       ingredients: [
-        '1 lb ground beef',
-        '1 tablespoon olive oil',
+        '1 lb beef sirloin, thinly sliced',
+        '2 tablespoons olive oil',
         '1 onion, chopped',
         '2 cloves garlic, minced',
-        '1 packet taco seasoning',
-        '1/2 cup water',
-        'Taco shells or tortillas',
-        'Shredded lettuce',
-        'Diced tomatoes',
-        'Shredded cheddar cheese',
-        'Sour cream',
+        '1 cup beef broth',
+        '1 cup sour cream',
+        '1 tablespoon flour',
+        'Salt and pepper to taste',
+        '2 tablespoons chopped parsley',
       ],
       procedure: [
-        'Heat olive oil in a skillet over medium heat. Add onion and cook until softened.',
-        'Add garlic and cook for an additional minute.',
-        'Add ground beef and cook until browned. Drain excess fat.',
-        'Stir in taco seasoning and water. Simmer for 5-7 minutes, or until thickened.',
-        'Serve the beef mixture in taco shells or tortillas with your choice of toppings.',
+        'Heat the olive oil in a large skillet over medium-high heat. Add the beef and cook until browned.',
+        'Remove the beef and set aside. In the same skillet, add the onion and garlic, and cook until softened.',
+        'Stir in the flour and cook for 1 minute.',
+        'Add the beef broth and bring to a simmer.',
+        'Return the beef to the skillet and cook until heated through.',
+        'Stir in the sour cream and cook until the sauce is thickened.',
+        'Season with salt and pepper, and garnish with chopped parsley before serving.',
       ],
-      timetaken: '20 minutes',
-      type: 'Non-Veg',
+      timetaken: '30 minutes',
+      type: 'Main Course',
       rating: 4.7,
+      category: 'Non-Veg', // Added category
       poster:
-        'https://www.fromvalerieskitchen.com/wordpress/wp-content/uploads/2023/08/Shredded-Beef-Tacos-19.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqfU1Mf2vU59lEzp4Fiol0nWgk27jLUS0m_w&s',
     },
     {
-      title: 'Garlic Butter Shrimp',
+      title: 'Shrimp Scampi',
       ingredients: [
         '1 lb large shrimp, peeled and deveined',
-        '2 tablespoons butter',
+        '8 oz linguine pasta',
+        '4 tablespoons butter',
         '4 cloves garlic, minced',
-        '1/4 teaspoon red pepper flakes',
-        '1/4 cup chopped parsley',
+        '1/4 cup white wine',
+        '1 tablespoon lemon juice',
+        '2 tablespoons chopped parsley',
         'Salt and pepper to taste',
-        'Lemon wedges for serving',
       ],
       procedure: [
-        'Melt butter in a large skillet over medium heat.',
-        'Add garlic and red pepper flakes. Cook until garlic is fragrant.',
-        'Add shrimp and cook for 2-3 minutes per side, or until pink and opaque.',
-        'Season with salt and pepper and stir in chopped parsley.',
-        'Serve with lemon wedges.',
+        'Cook the linguine according to package instructions. Drain and set aside.',
+        'Heat the butter in a large skillet over medium heat. Add the garlic and cook until fragrant.',
+        'Add the shrimp and cook until pink and cooked through.',
+        'Pour in the white wine and lemon juice, and simmer for 2 minutes.',
+        'Add the cooked linguine and toss to combine.',
+        'Season with salt and pepper, and garnish with chopped parsley before serving.',
       ],
-      timetaken: '15 minutes',
-      type: 'Non-Veg',
+      timetaken: '25 minutes',
+      type: 'Main Course',
       rating: 4.8,
+      category: 'Non-Veg', // Added category
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwtg76-NSXo42bZWry0uc-K2qvg9-y7JTDjQ&s',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSowJ3J56PV7cqIZ-7_C8jj1E-PMmy-zB_U7Q&s',
     },
     {
-      title: 'Honey Mustard Glazed Salmon',
+      title: 'Pork Tenderloin with Apples',
       ingredients: [
-        '4 salmon fillets',
+        '1 lb pork tenderloin',
         '2 tablespoons olive oil',
-        '1/4 cup honey',
-        '1/4 cup Dijon mustard',
-        '2 tablespoons soy sauce',
-        '1 tablespoon lemon juice',
+        '2 apples, sliced',
+        '1 onion, sliced',
+        '1/2 cup chicken broth',
+        '1 tablespoon honey',
+        '1 teaspoon dried thyme',
         'Salt and pepper to taste',
       ],
       procedure: [
         'Preheat the oven to 400°F (200°C).',
-        'In a bowl, whisk together honey, Dijon mustard, soy sauce, and lemon juice.',
-        'Place salmon fillets on a baking sheet and brush with olive oil. Season with salt and pepper.',
-        'Spread the honey mustard glaze over the salmon fillets.',
-        'Bake for 12-15 minutes, or until the salmon flakes easily with a fork.',
-      ],
-      timetaken: '20 minutes',
-      type: 'Non-Veg',
-      rating: 4.7,
-      poster:
-        'https://www.halfbakedharvest.com/wp-content/uploads/2023/01/Sheet-Pan-Honey-Mustard-Salmon-with-Caesar-Roasted-Potatoes-5.jpg',
-    },
-    {
-      title: 'Chicken Caesar Salad',
-      ingredients: [
-        '2 boneless, skinless chicken breasts',
-        '1 tablespoon olive oil',
-        'Salt and pepper to taste',
-        '4 cups romaine lettuce, chopped',
-        '1/2 cup Caesar dressing',
-        '1/4 cup grated Parmesan cheese',
-        '1 cup croutons',
-      ],
-      procedure: [
-        'Season chicken breasts with salt and pepper. Heat olive oil in a skillet over medium heat.',
-        'Cook chicken for 6-7 minutes per side, or until fully cooked. Slice into strips.',
-        'In a large bowl, toss romaine lettuce with Caesar dressing.',
-        'Top with sliced chicken, Parmesan cheese, and croutons before serving.',
-      ],
-      timetaken: '20 minutes',
-      type: 'Salad',
-      rating: 4.6,
-      poster:
-        'https://www.halfbakedharvest.com/wp-content/uploads/2022/07/Buffalo-Ranch-Pretzel-Chicken-Caesar-Salad-1.jpg',
-    },
-    {
-      title: 'Pork Schnitzel',
-      ingredients: [
-        '4 pork chops, pounded thin',
-        '1 cup flour',
-        '2 large eggs, beaten',
-        '1 cup breadcrumbs',
-        '1/2 cup grated Parmesan cheese',
-        '1/4 cup vegetable oil',
-        'Lemon wedges for serving',
-        'Salt and pepper to taste',
-      ],
-      procedure: [
-        'Preheat the oven to 375°F (190°C).',
-        'Set up a breading station: place flour in one dish, beaten eggs in another, and a mixture of breadcrumbs and Parmesan cheese in a third.',
-        'Dredge each pork chop in flour, dip in eggs, and coat with breadcrumb mixture.',
-        'Heat vegetable oil in a large skillet over medium heat.',
-        'Cook pork chops for 3-4 minutes per side, or until golden brown and cooked through.',
-        'Transfer to a baking sheet and bake for an additional 10 minutes if needed.',
-        'Serve with lemon wedges.',
+        'Heat the olive oil in a skillet over medium-high heat. Sear the pork tenderloin on all sides until browned.',
+        'Transfer the pork to a baking dish. Arrange the apples and onion around the pork.',
+        'In a small bowl, mix the chicken broth, honey, thyme, salt, and pepper.',
+        'Pour the mixture over the pork and apples.',
+        'Bake for 25-30 minutes, or until the pork is cooked through and the apples are tender.',
       ],
       timetaken: '40 minutes',
       type: 'Main Course',
-      rating: 4.5,
+      rating: 4.6,
+      category: 'Non-Veg', // Added category
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0k7OateHdr_JPhwuEvxrs5uIrMpzeHddkbw&s',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LhBf7DgIzUZNeCwI88mO8o0EqV32DJU9FA&s',
     },
   ];
 

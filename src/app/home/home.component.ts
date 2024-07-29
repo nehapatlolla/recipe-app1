@@ -35,6 +35,7 @@ import { NonvegComponent } from '../nonveg/nonveg.component';
 })
 export class HomeComponent {
   searchTerm: string = '';
+  selectedCategory: string = '';
   recipes: any = [];
   filteredRecipes: Recipe[] = [];
 
@@ -47,5 +48,7 @@ export class HomeComponent {
     this.filteredRecipes = this.recipes.filter((recipe: any) =>
       recipe.title.toLowerCase().includes(this.searchTerm.toLocaleLowerCase())
     );
+
+    //this.selectedCategory= this.recipes.filter((recipee: any) =>this.recipee.category.toLowerCase() === this.selectedCategory.toLowerCase() );
   }
 }

@@ -225,7 +225,7 @@ export class RecipeService {
       rating: 4.5,
       category: 'Veg', // Added category
       poster:
-        'https://www.cookingclassy.com/wp-content/uploads/2019/03/cauliflower-curry-4.jpg',
+        'https://thealmondeater.com/wp-content/uploads/2022/02/Cauliflower-Curry_web-7.jpg',
     },
     {
       title: 'Chicken Alfredo',
@@ -253,7 +253,7 @@ export class RecipeService {
       rating: 4.6,
       category: 'Non-Veg', // Added category
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCuI5rMQ5K0xTY_DjUjJjI0zdXb16aF6ZpUQ&s',
+        'https://www.budgetbytes.com/wp-content/uploads/2022/07/Chicken-Alfredo-bowl.jpg',
     },
     {
       title: 'Beef Stroganoff',
@@ -282,7 +282,7 @@ export class RecipeService {
       rating: 4.7,
       category: 'Non-Veg', // Added category
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqfU1Mf2vU59lEzp4Fiol0nWgk27jLUS0m_w&s',
+        'https://www.gimmesomeoven.com/wp-content/uploads/2020/10/Beef-Stroganoff-Recipe-9.jpg',
     },
     {
       title: 'Shrimp Scampi',
@@ -309,7 +309,7 @@ export class RecipeService {
       rating: 4.8,
       category: 'Non-Veg', // Added category
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSowJ3J56PV7cqIZ-7_C8jj1E-PMmy-zB_U7Q&s',
+        'https://static01.nyt.com/images/2022/06/02/dining/ShrimpScampi_thumb/ShrimpScampi_thumb-square640.jpg',
     },
     {
       title: 'Pork Tenderloin with Apples',
@@ -336,7 +336,7 @@ export class RecipeService {
       rating: 4.6,
       category: 'Non-Veg', // Added category
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LhBf7DgIzUZNeCwI88mO8o0EqV32DJU9FA&s',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0k7OateHdr_JPhwuEvxrs5uIrMpzeHddkbw&s%27',
     },
   ];
 

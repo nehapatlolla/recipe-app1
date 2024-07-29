@@ -1,7 +1,12 @@
 <mat-card appearance="outlined" class="main-container">
   <mat-card-content>
     <div class="Veg">
-      <img src="{{ recipes.poster }}" alt="img" class="image" />
+      <img
+        src="{{ recipes.poster }}"
+        alt="img"
+        class="image"
+        (click)="showrecipe()"
+      />
       <div class="flex">
         <div class="flex1">
           <h3>{{ recipes.title }}</h3>
@@ -74,7 +79,6 @@
         <h4>Procedure:</h4>
         <p>{{ recipes.procedure }}</p>
       </div>
-
       } @if(shown) {
       <div class="summary">
         <h4>Ingredients:</h4>

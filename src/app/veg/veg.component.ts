@@ -52,4 +52,7 @@ export class VegComponent {
   DislikeIncrement() {
     this.dislike = this.dislike + 1;
   }
+  showrecipe() {
+    console.log('showing...');
+  }
 }

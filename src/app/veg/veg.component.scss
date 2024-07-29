@@ -56,3 +56,9 @@
     transform: scale(0.99);
     cursor: pointer;
 }
+.lowerstyle
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -40,3 +40,12 @@
 {
   margin-top: 5px;
 }
+.main-container
+{
+    transition: all 0.7s;
+}
+
+.main-container:hover
+{ 
+   transform: scale(1.1);
+}

@@ -3,11 +3,12 @@ import { Recipe } from '../app.component';
 import { RecipeService } from '../recipe.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-veg',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule],
+  imports: [MatIconModule, MatButtonModule, MatCardModule],
   templateUrl: './veg.component.html',
   styleUrl: './veg.component.scss',
 })

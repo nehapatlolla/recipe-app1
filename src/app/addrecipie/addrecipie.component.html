@@ -2,7 +2,7 @@
   <div class="innerform">
     <mat-form-field>
       <mat-label>Recipie Name</mat-label>
-      <input matInput place-holder="Name" [(ngModel)]="obj.name" />
+      <input matInput place-holder="Name" [(ngModel)]="obj.title" />
     </mat-form-field>
     <br />
     <mat-form-field>
@@ -17,12 +17,22 @@
     <br />
     <mat-form-field>
       <mat-label>Steps</mat-label>
-      <input matInput place-holder="text" [(ngModel)]="obj.steps" />
+      <input matInput place-holder="text" [(ngModel)]="obj.procedure" />
     </mat-form-field>
     <br />
     <mat-form-field>
       <mat-label>Ingredients</mat-label>
       <input matInput place-holder="text" [(ngModel)]="obj.ingredients" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <input matInput place-holder="text" [(ngModel)]="obj.type" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <input matInput place-holder="text" [(ngModel)]="obj.category" />
     </mat-form-field>
   </div>
   <br />

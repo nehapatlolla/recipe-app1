@@ -27,13 +27,14 @@ export class AddrecipieComponent {
   steps: any;
   ingredients: any;
   obj = {
-    name: '',
+    title: '',
     poster: '',
-    steps: '',
+    procedure: '',
     ingredients: '',
     timetaken: '',
     type: '',
     rating: 0,
+    category: '',
   };
   constructor(private recipeService: RecipeService) {
     this.recipeList = this.recipeService.getrecipes();

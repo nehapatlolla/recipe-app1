@@ -10,6 +10,12 @@ export const routes: Routes = [
     path: '',
     component: BasicComponent,
   },
+  {
+    path: 'startcooking',
+    redirectTo: '/recipes',
+    pathMatch: 'full',
+  },
+
   { path: 'home', component: HomeComponent },
   { path: 'recipes', component: RecipeComponent },
   {

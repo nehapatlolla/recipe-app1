@@ -1,5 +1,6 @@
 nav{
-    background-color: lightsalmon;  
+    background: rgb(226,151,101);
+    background: radial-gradient(circle, rgba(226,151,101,1) 34%, rgba(191,99,38,1) 61%);
     display: flex;
     justify-content: space-between;
     align-items: center; 

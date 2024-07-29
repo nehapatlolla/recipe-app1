@@ -9,18 +9,18 @@
           color="primary"
           aria-hidden="false"
           aria-label="Example home icon"
-          fontIcon=" stat 1
+          fontIcon=" unfold_more
           "
         ></mat-icon>
 
-        <mat-icon
+        <!-- <mat-icon
           (click)="clickmethods()"
           color="primary"
           aria-hidden="false"
           aria-label="Example home icon"
-          fontIcon=" stat 1
-          "
-        ></mat-icon>
+          >Ingredients</mat-icon
+        > -->
+        <button (click)="clickmethods()" mat-raised-button>Ingredients</button>
       </div>
     </div>
     <h3>⭐{{ recipes.rating }}</h3>

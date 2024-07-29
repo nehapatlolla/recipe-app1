@@ -45,8 +45,17 @@ export class HomeComponent {
   }
 
   onSearch() {
-    this.filteredRecipes = this.recipes.filter((recipe: any) =>
-      recipe.title.toLowerCase().includes(this.searchTerm.toLocaleLowerCase())
+    this.filteredRecipes = this.recipes.filter(
+      (recipe: any) =>
+        recipe.title
+          .toLowerCase()
+          .includes(this.searchTerm.toLocaleLowerCase()) ||
+        recipe.type
+          .toLowerCase()
+          .includes(this.searchTerm.toLocaleLowerCase()) ||
+        recipe.category
+          .toLowerCase()
+          .includes(this.searchTerm.toLocaleLowerCase())
     );
 
     //this.selectedCategory= this.recipes.filter((recipee: any) =>this.recipee.category.toLowerCase() === this.selectedCategory.toLowerCase() );

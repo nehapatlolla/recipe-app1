@@ -35,7 +35,6 @@ import { NonvegComponent } from '../nonveg/nonveg.component';
 })
 export class HomeComponent {
   searchTerm: string = '';
-  selectedCategory: string = '';
   recipes: any = [];
   filteredRecipes: Recipe[] = [];
 

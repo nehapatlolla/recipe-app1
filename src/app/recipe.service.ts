@@ -367,7 +367,7 @@ export class RecipeService {
       rating: 4.7,
       category: 'Non-Veg',
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2vN-LqM5PUs9VbUl4F-1K2V4M-29cX-V9xw&s',
+        'https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Tikka-Masala-min-750x750.jpg',
     },
     {
       title: 'Palak Paneer',
@@ -399,7 +399,7 @@ export class RecipeService {
       rating: 4.6,
       category: 'Veg',
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4f7sDQKvWfxcWn4PknUjVbdmFs5TpXr2pQ&s',
+        'https://www.indianveggiedelight.com/wp-content/uploads/2017/10/palak-paneer-recipe-featured.jpg',
     },
     {
       title: 'Chole (Chickpea Curry)',
@@ -430,7 +430,7 @@ export class RecipeService {
       rating: 4.8,
       category: 'Veg',
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQw5yYZ4Q3llD-D1Tyqls6DJ6avKXl8ZsFQ&s',
+        'https://www.eatingwell.com/thmb/Kx41aHMgb9iAY41IM5eSrQi-3O8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chickpea-curry-chhole-1x1-41ea4d53c7df4fddabd83caa5b57718e.jpg',
     },
     {
       title: 'Butter Chicken',
@@ -461,7 +461,7 @@ export class RecipeService {
       rating: 4.7,
       category: 'Non-Veg',
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbE0cLP0mKa3u4QK9RyI6h6i9Sy8OU5SHEwg&s',
+        'https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Best-Instant-Pot-Butter-Chicken-Recipe.jpg',
     },
     {
       title: 'Aloo Gobi (Potato and Cauliflower)',
@@ -492,7 +492,7 @@ export class RecipeService {
       rating: 4.5,
       category: 'Veg',
       poster:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7tK4J8rgWz7ZqWb9s_dRql3QpYsh_M-8aEw&s',
+        'https://www.cookclickndevour.com/wp-content/uploads/2020/10/aloo-gobi-recipe.jpg',
     },
   ];
 

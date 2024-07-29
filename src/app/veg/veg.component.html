@@ -18,14 +18,55 @@
 
       <h4>{{ recipes.timeTaken }}</h4>
       <div class="typeDelete">
-        <h4 class="type">Type: {{ recipes.type }}</h4>
-        <mat-icon
-          (click)="deleteRecioe()"
-          color="primary"
-          aria-hidden="false"
-          aria-label="delete icon"
-          fontIcon="delete"
-        ></mat-icon>
+        <h4 class="type">
+          <i class="fa-solid fa-list"></i> {{ recipes.type }}
+        </h4>
+        @if (recipes.category =='Veg') {
+        <h4 class="type">
+          <i class="fa-solid fa-bowl-rice" style="color: green"></i>
+          {{ recipes.category }}
+        </h4>
+        } @if(recipes.category =='Non-Veg'){
+        <h4 class="type">
+          <i class="fa-solid fa-drumstick-bite" style="color: brown"></i>
+          {{ recipes.category }}
+        </h4>
+        }
+      </div>
+      <div class="lowerstyle">
+        <div class="likes">
+          <button
+            color="primary"
+            mat-icon-button
+            (click)="likeIncrement()"
+            [matBadge]="like"
+          >
+            <mat-icon
+              ><i class="fa-solid fa-heart" style="color: red"></i
+            ></mat-icon>
+          </button>
+
+          <button
+            color="Error"
+            mat-icon-button
+            (click)="DislikeIncrement()"
+            [matBadge]="dislike"
+          >
+            <mat-icon
+              ><i class="fa-solid fa-thumbs-down" style="color: blue"></i
+            ></mat-icon>
+          </button>
+        </div>
+
+        <div class="deletes">
+          <mat-icon
+            (click)="deleteRecioe()"
+            color="primary"
+            aria-hidden="false"
+            aria-label="delete icon"
+            ><i class="fa-solid fa-trash" style="color: grey"></i
+          ></mat-icon>
+        </div>
       </div>
       <div class="button"></div>
       @if(show) {

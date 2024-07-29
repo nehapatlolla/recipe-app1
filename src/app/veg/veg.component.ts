@@ -4,11 +4,12 @@ import { RecipeService } from '../recipe.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @Component({
   selector: 'app-veg',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatCardModule],
+  imports: [MatIconModule, MatButtonModule, MatCardModule, MatBadgeModule],
   templateUrl: './veg.component.html',
   styleUrl: './veg.component.scss',
 })
@@ -42,6 +43,14 @@ export class VegComponent {
   deleteRecioe() {
     console.log('deleting the recipe', this.recipes);
     this.recipeServie.deleterecipie(this.recipes);
+  }
+  like = 0;
+  dislike = 0;
+  likeIncrement() {
+    this.like = this.like + 1;
+  }
+  DislikeIncrement() {
+    this.dislike = this.dislike + 1;
   }
   showrecipe() {
     console.log('showing...');

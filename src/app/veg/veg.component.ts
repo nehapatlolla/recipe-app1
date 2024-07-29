@@ -43,4 +43,7 @@ export class VegComponent {
     console.log('deleting the recipe', this.recipes);
     this.recipeServie.deleterecipie(this.recipes);
   }
+  showrecipe() {
+    console.log('showing...');
+  }
 }

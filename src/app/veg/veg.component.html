@@ -29,12 +29,12 @@
         @if (recipes.category =='Veg') {
         <h4 class="type">
           <i class="fa-solid fa-bowl-rice" style="color: green"></i>
-          {{ recipes.category }}
+          <span class="green">{{ recipes.category }}</span>
         </h4>
         } @if(recipes.category =='Non-Veg'){
         <h4 class="type">
           <i class="fa-solid fa-drumstick-bite" style="color: brown"></i>
-          {{ recipes.category }}
+          <span class="red">{{ recipes.category }}</span>
         </h4>
         }
       </div>
@@ -58,7 +58,7 @@
             [matBadge]="dislike"
           >
             <mat-icon
-              ><i class="fa-solid fa-thumbs-down" style="color: blue"></i
+              ><i class="fa-solid fa-thumbs-down" style="color: #5a64c0"></i
             ></mat-icon>
           </button>
         </div>

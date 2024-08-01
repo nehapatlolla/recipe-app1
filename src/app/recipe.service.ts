@@ -495,7 +495,6 @@ export class RecipeService {
   //       'https://www.cookclickndevour.com/wp-content/uploads/2020/10/aloo-gobi-recipe.jpg',
   //   },
   // ];
-  recipeList: any;
   ReciepsList: any;
 
   constructor() {

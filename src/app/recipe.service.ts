@@ -7,6 +7,7 @@ export class RecipeService {
   ReciepsList = [
     // src/app/food-data.ts
     {
+      id: 1,
       title: 'Vegetable Stir-Fry',
       ingredients: [
         '2 tablespoons vegetable oil',
@@ -33,6 +34,7 @@ export class RecipeService {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5igQTy4xBK0yhNXVAJU_1NAOsKAdKcqB5dw&s',
     },
     {
+      id: 2,
       title: 'Chickpea Salad',
       ingredients: [
         '1 can chickpeas, drained and rinsed',
@@ -53,11 +55,12 @@ export class RecipeService {
       timetaken: '10 minutes',
       type: 'Salad',
       rating: 4.8,
-      category: 'Veggie', // Added category
+      category: 'Veggie',
       poster:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMdtdbrByR_82n-ELyELB1kHGyB4k7NVrcow&s',
     },
     {
+      id: 3,
       title: 'Vegetarian Chili',
       ingredients: [
         '2 tablespoons olive oil',
@@ -88,6 +91,7 @@ export class RecipeService {
         'https://images.immediate.co.uk/production/volatile/sites/30/2022/10/Vegetarian-chilli-206c469.jpg?resize=768,574',
     },
     {
+      id: 4,
       title: 'Spinach and Feta Stuffed Mushrooms',
       ingredients: [
         '12 large mushrooms, stems removed',
@@ -114,6 +118,7 @@ export class RecipeService {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC4V5FV5Z9rWGY2s-VXw9VIbr3CPtVF4aLaA&s',
     },
     {
+      id: 5,
       title: 'Lentil Soup',
       ingredients: [
         '1 tablespoon olive oil',
@@ -144,6 +149,7 @@ export class RecipeService {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTwiwE3eGMsi3i-KSa2hzdolSWCEmSWGAg6w&s',
     },
     {
+      id: 6,
       title: 'Stuffed Bell Peppers',
       ingredients: [
         '4 large bell peppers',
@@ -172,6 +178,7 @@ export class RecipeService {
         'https://www.allrecipes.com/thmb/eBsB2933MCuNVCim4O-AyCR97YE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/79805-StuffedPeppersWithturkeyAndVegtables-MFS-2x3-0048-444ecb49b0184daab29e5326e4330af3.jpg',
     },
     {
+      id: 7,
       title: 'Sweet Potato and Black Bean Tacos',
       ingredients: [
         '2 tablespoons olive oil',
@@ -198,6 +205,7 @@ export class RecipeService {
         'https://joyfoodsunshine.com/wp-content/uploads/2018/01/vegetarian-black-bean-sweet-potato-tacos-13.jpg',
     },
     {
+      id: 8,
       title: 'Cauliflower Curry',
       ingredients: [
         '2 tablespoons vegetable oil',
@@ -228,6 +236,7 @@ export class RecipeService {
         'https://thealmondeater.com/wp-content/uploads/2022/02/Cauliflower-Curry_web-7.jpg',
     },
     {
+      id: 9,
       title: 'Chicken Alfredo',
       ingredients: [
         '8 oz fettuccine pasta',
@@ -256,6 +265,7 @@ export class RecipeService {
         'https://www.budgetbytes.com/wp-content/uploads/2022/07/Chicken-Alfredo-bowl.jpg',
     },
     {
+      id: 10,
       title: 'Beef Stroganoff',
       ingredients: [
         '1 lb beef sirloin, thinly sliced',
@@ -285,6 +295,7 @@ export class RecipeService {
         'https://www.gimmesomeoven.com/wp-content/uploads/2020/10/Beef-Stroganoff-Recipe-9.jpg',
     },
     {
+      id: 11,
       title: 'Shrimp Scampi',
       ingredients: [
         '1 lb large shrimp, peeled and deveined',
@@ -312,6 +323,7 @@ export class RecipeService {
         'https://static01.nyt.com/images/2022/06/02/dining/ShrimpScampi_thumb/ShrimpScampi_thumb-square640.jpg',
     },
     {
+      id: 12,
       title: 'Pork Tenderloin with Apples',
       ingredients: [
         '1 lb pork tenderloin',
@@ -339,6 +351,7 @@ export class RecipeService {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0k7OateHdr_JPhwuEvxrs5uIrMpzeHddkbw&s%27',
     },
     {
+      id: 13,
       title: 'Chicken Tikka Masala',
       ingredients: [
         '1 lb chicken breast, cut into cubes',
@@ -370,6 +383,7 @@ export class RecipeService {
         'https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Tikka-Masala-min-750x750.jpg',
     },
     {
+      id: 14,
       title: 'Palak Paneer',
       ingredients: [
         '2 cups spinach, chopped',
@@ -402,6 +416,7 @@ export class RecipeService {
         'https://www.indianveggiedelight.com/wp-content/uploads/2017/10/palak-paneer-recipe-featured.jpg',
     },
     {
+      id: 15,
       title: 'Chole (Chickpea Curry)',
       ingredients: [
         '2 cups chickpeas, soaked overnight and boiled',
@@ -433,6 +448,7 @@ export class RecipeService {
         'https://www.eatingwell.com/thmb/Kx41aHMgb9iAY41IM5eSrQi-3O8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chickpea-curry-chhole-1x1-41ea4d53c7df4fddabd83caa5b57718e.jpg',
     },
     {
+      id: 16,
       title: 'Butter Chicken',
       ingredients: [
         '1 lb chicken, cut into pieces',
@@ -464,6 +480,7 @@ export class RecipeService {
         'https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Best-Instant-Pot-Butter-Chicken-Recipe.jpg',
     },
     {
+      id: 17,
       title: 'Aloo Gobi (Potato and Cauliflower)',
       ingredients: [
         '2 potatoes, peeled and diced',

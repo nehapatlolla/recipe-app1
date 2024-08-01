@@ -1,1 +1,14 @@
-<p>recipe works!</p>
+<img src="{{ recipes.poster }}" alt="img" class="image" />
+<h3>{{ recipes.title }}</h3>
+<h3>⭐{{ recipes.rating }}</h3>
+<h4>{{ recipes.timeTaken }}</h4>
+<h4 class="type"><i class="fa-solid fa-list"></i> {{ recipes.type }}</h4>
+<div class="summary">
+  <h4>Procedure:</h4>
+  <p>{{ recipes.procedure }}</p>
+</div>
+
+<div class="summary">
+  <h4>Ingredients:</h4>
+  <p>{{ recipes.ingredients }}</p>
+</div>

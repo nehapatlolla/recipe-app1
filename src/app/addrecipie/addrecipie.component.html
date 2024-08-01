@@ -1,56 +1,101 @@
-<div class="add-recipie-form">
-  <div class="innerform">
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="addd-recipe-form">
+
+  <!-- <div class="innerform">  -->
     <mat-form-field>
       <mat-label>Recipie Name</mat-label>
-      <input matInput place-holder="Name" [(ngModel)]="obj.title" />
+      <input matInput placeholder="Name" formControlName="title" />
+
+      @if(title?.touched && title?.hasError('required') ){
+        <mat-error>Name is <strong>required</strong></mat-error>
+        } @if(title?.touched && title?.hasError('minlength') ){
+        <mat-error>Please provide full recipe name 😁</mat-error>
+        }
     </mat-form-field>
     <br />
+
     <mat-form-field>
-      <mat-label>poster</mat-label>
-      <input matInput place-holder="" [(ngModel)]="obj.poster" />
+      <mat-label>Poster</mat-label>
+      <input matInput placeholder="http://" formControlName="poster" />
+  
+      @if(poster?.touched && poster?.hasError('required') ){
+      <mat-error>Poster is <strong>required</strong></mat-error>
+      } @if(poster?.touched && poster?.hasError('minlength') ){
+      <mat-error>Please provide full movie poster 😁</mat-error>
+      }@if(poster?.touched && poster?.hasError('pattern') ){
+      <mat-error>Please start with <strong>https://</strong> 🧑‍🚀 </mat-error>
+      }
     </mat-form-field>
-    <br />
+
+
     <mat-form-field>
       <mat-label>Rating</mat-label>
-      <input matInput place-holder="number" [(ngModel)]="obj.rating" />
+      <input type="number" matInput placeholder="Rating" formControlName="rating" />
+  
+      @if(rating?.touched && rating?.hasError('required') ){
+      <mat-error>Rating is <strong>required</strong></mat-error>
+      } @if(rating?.touched && rating?.hasError('min') ){
+      <mat-error>Rating is <strong>too low 🥲</strong></mat-error>
+      } @if(rating?.touched && rating?.hasError('max') ){
+      <mat-error>Rating is too high 😓</mat-error>
+      }
     </mat-form-field>
     <br />
+
+
     <mat-form-field>
-      <mat-label>Steps</mat-label>
-      <input
-        matInput
-        place-holder="Steps to Work"
-        [(ngModel)]="obj.procedure"
-      />
+      <mat-label>Recipe Procedure</mat-label>
+      <input matInput placeholder="Procedure" formControlName="procedure" />
+
+      @if(procedure?.touched && procedure?.hasError('required') ){
+        <mat-error>procedure is <strong>required</strong></mat-error>
+        } @if(procedure?.touched && procedure?.hasError('minlength') ){
+        <mat-error>Please provide full recipe procedure 😁</mat-error>
+        }
     </mat-form-field>
     <br />
+
+
     <mat-form-field>
-      <mat-label>Ingredients</mat-label>
-      <input
-        matInput
-        place-holder="Requirements"
-        [(ngModel)]="obj.ingredients"
-      />
+      <mat-label>Recipe type</mat-label>
+      <input matInput placeholder="Type" formControlName="type" />
+
+      @if(type?.touched && type?.hasError('required') ){
+        <mat-error>type is <strong>required</strong></mat-error>
+        } @if(type?.touched && type?.hasError('minlength') ){
+        <mat-error>Please provide full recipe type 😁</mat-error>
+        }
     </mat-form-field>
     <br />
+
+
     <mat-form-field>
-      <mat-label>Type</mat-label>
-      <input
-        matInput
-        place-holder="Main Course/Soup/Dessert"
-        [(ngModel)]="obj.type"
-      />
+      <mat-label>Recipe Category</mat-label>
+      <input matInput placeholder="Category" formControlName="category" />
+
+      @if(category?.touched && category?.hasError('required') ){
+        <mat-error>category is <strong>required</strong></mat-error>
+        } @if(category?.touched && category?.hasError('minlength') ){
+        <mat-error>Please provide full recipe category 😁</mat-error>
+        }
     </mat-form-field>
     <br />
+
+
     <mat-form-field>
-      <mat-label>Category</mat-label>
-      <input
-        matInput
-        place-holder="Veggie/Non-Veg"
-        [(ngModel)]="obj.category"
-      />
+      <mat-label>Recipe ingredients</mat-label>
+      <input matInput placeholder="Ingredients" formControlName="ingredients" />
+
+      @if(ingredients?.touched && ingredients?.hasError('required') ){
+        <mat-error>ingredients is <strong>required</strong></mat-error>
+        } @if(ingredients?.touched && ingredients?.hasError('minlength') ){
+        <mat-error>Please provide full recipe ingredients 😁</mat-error>
+        }
     </mat-form-field>
-  </div>
-  <br />
+    <br />
+    
+  
   <button mat-raised-button (click)="addrecipie()">Add Recipie</button>
-</div>
+
+  </form>
+
+

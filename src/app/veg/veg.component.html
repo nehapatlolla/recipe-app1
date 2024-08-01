@@ -1,16 +1,18 @@
 <mat-card appearance="outlined" class="main-container">
-  <mat-card-content>
+  <mat-card-content (click)="showrecipe()">
     <div class="Veg">
-      <img
-        src="{{ recipes.poster }}"
-        alt="img"
-        class="image"
-        (click)="showrecipe()"
-      />
+      <img src="{{ recipes.poster }}" alt="img" class="image" />
       <div class="flex">
         <div class="flex1">
           <h3>{{ recipes.title }}</h3>
         </div>
+        <button
+          mat-icon-button
+          aria-label="Example icon button with a vertical three dot icon"
+          routerLink="/recipe/{{ id }}"
+        >
+          <mat-icon>info</mat-icon>
+        </button>
         <h3>⭐{{ recipes.rating }}</h3>
       </div>
       <div
@@ -87,4 +89,9 @@
     </div>
     <!-- <h1>works</h1> -->
   </mat-card-content>
+  @if(showRecipe) {
+  <div>
+    <!-- <app-recipe /> -->
+  </div>
+  }
 </mat-card>

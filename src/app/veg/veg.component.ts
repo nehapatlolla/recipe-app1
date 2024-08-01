@@ -5,18 +5,33 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
+import { Router, RouterLink } from '@angular/router';
+import { RecipeComponent } from '../recipe/recipe.component';
 
 @Component({
   selector: 'app-veg',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatCardModule, MatBadgeModule],
+  imports: [
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatBadgeModule,
+    RecipeComponent,
+    RouterLink,
+  ],
   templateUrl: './veg.component.html',
   styleUrl: './veg.component.scss',
 })
 export class VegComponent {
-  constructor(private recipeServie: RecipeService) {
-    console.log(this.recipeServie);
-  }
+  // constructor(private recipeServie: RecipeService) {
+  //   console.log(this.recipeServie);
+  // }
+
+  constructor(
+    private router: Router,
+    private recipeService: RecipeService // Inject RecipeService
+  ) {}
+  id: any;
   @Input()
   recipes = {
     title: '',
@@ -31,6 +46,7 @@ export class VegComponent {
   };
 
   show: boolean = false;
+  showRecipe: boolean = false;
   clickmethod() {
     this.show = !this.show;
   }
@@ -42,7 +58,7 @@ export class VegComponent {
 
   deleteRecioe() {
     console.log('deleting the recipe', this.recipes);
-    this.recipeServie.deleterecipie(this.recipes);
+    this.recipeService.deleterecipie(this.recipes);
   }
   like = 0;
   dislike = 0;
@@ -54,5 +70,6 @@ export class VegComponent {
   }
   showrecipe() {
     console.log('showing...');
+    this.showRecipe = !this.showRecipe;
   }
 }

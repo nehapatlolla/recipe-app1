@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Recipe } from '../app.component';
 import { RecipeService } from '../recipe.service';
 import { MatIconModule } from '@angular/material/icon';
@@ -56,9 +56,18 @@ export class VegComponent {
     this.shown = !this.shown;
   }
 
+  // @Input() id!: string;
+  @Output() deleteRecipieEvent = new EventEmitter<any>();
+
+  // show = true;
+  // deleteMovie() {
+  //   console.log('Child ❌', this.movie);
+  //   this.deleteMovieEvent.emit(this.movie);
+  // }
   deleteRecioe() {
     console.log('deleting the recipe', this.recipes);
-    this.recipeService.deleterecipie(this.recipes);
+    // this.recipeService.deleterecipie(this.recipes);
+    this.deleteRecipieEvent.emit(this.recipes);
   }
   like = 0;
   dislike = 0;

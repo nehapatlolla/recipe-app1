@@ -494,16 +494,14 @@ export class RecipeService {
   // ];
   ReciepsList: any;
 
-  constructor() {
-    fetch('https://669a42939ba098ed61fef782.mockapi.io/ReciepsList')
-      .then((data) => data.json())
-      .then((res) => (this.ReciepsList = res));
-  }
+  constructor() {}
 
   getrecipes() {
-    console.log('adding....');
-    return this.ReciepsList;
+    return fetch(
+      'https://669a42939ba098ed61fef782.mockapi.io/ReciepsList'
+    ).then((data) => data.json());
   }
+
   addrecipie(recipe: any) {
     //.then((res) => (this.ReciepsList = res));
     // this.ReciepsList.push(recipe);
@@ -515,11 +513,14 @@ export class RecipeService {
       },
     }).then((res) => res.json());
   }
-  deleterecipie(recipe: any) {
+  deleterecipie(id: any) {
+    console.log('servie component..');
+    console.log(id);
+
     // let idx = this.ReciepsList.indexOf(recipe);
     // this.ReciepsList.splice(idx, 1);
     return fetch(
-      `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${recipe.id} `,
+      `https://669a42939ba098ed61fef782.mockapi.io/ReciepsList/${id} `,
       {
         method: 'DELETE',
       }

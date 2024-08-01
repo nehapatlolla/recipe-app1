@@ -39,10 +39,18 @@ export class HomeComponent {
   filteredRecipes: Recipe[] = [];
 
   constructor(private recipeService: RecipeService) {
-    this.recipes = this.recipeService.getrecipes();
-    this.filteredRecipes = this.recipes;
+    // this.recipes = this.recipeService.getrecipes();
   }
 
+  ngOnInit() {
+    this.loadRecipes();
+  }
+  loadRecipes() {
+    this.recipeService.getrecipes().then((data: any) => {
+      this.recipes = data;
+      this.filteredRecipes = this.recipes;
+    });
+  }
   onSearch() {
     this.filteredRecipes = this.recipes.filter(
       (recipe: any) =>
@@ -58,5 +66,8 @@ export class HomeComponent {
     );
 
     //this.selectedCategory= this.recipes.filter((recipee: any) =>this.recipee.category.toLowerCase() === this.selectedCategory.toLowerCase() );
+  }
+  deleteRecioeP(recipe: any) {
+    this.recipeService.deleterecipie(recipe.id).then(() => this.loadRecipes());
   }
 }

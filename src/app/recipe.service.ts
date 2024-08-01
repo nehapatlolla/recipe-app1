@@ -4,9 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class RecipeService {
-  // ReciepsList = [
-  //   // src/app/food-data.ts
-  //   {
   //     title: 'Vegetable Stir-Fry',
   //     ingredients: [
   //       '2 tablespoons vegetable oil',
@@ -508,13 +505,30 @@ export class RecipeService {
     return this.ReciepsList;
   }
   addrecipie(recipe: any) {
-    this.ReciepsList.push(recipe);
+    //.then((res) => (this.ReciepsList = res));
+    // this.ReciepsList.push(recipe);
+    return fetch(`https://669a42939ba098ed61fef782.mockapi.io/ReciepsList`, {
+      method: 'POST',
+      body: JSON.stringify(recipe),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((res) => res.json());
   }
   deleterecipie(recipe: any) {
-    let idx = this.ReciepsList.indexOf(recipe);
-    this.ReciepsList.splice(idx, 1);
+    // let idx = this.ReciepsList.indexOf(recipe);
+    // this.ReciepsList.splice(idx, 1);
+    return fetch(
+      `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${recipe.id} `,
+      {
+        method: 'DELETE',
+      }
+    ).then((res) => res.json());
   }
   getRecipeById(recipe: any) {
     return this.ReciepsList;
+  }
+  getRecipeByIdx(idx: any) {
+    return this.ReciepsList[idx];
   }
 }

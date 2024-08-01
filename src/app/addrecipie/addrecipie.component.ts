@@ -5,6 +5,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { RecipeService } from '../recipe.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addrecipie',
@@ -36,10 +37,13 @@ export class AddrecipieComponent {
     rating: 0,
     category: '',
   };
-  constructor(private recipeService: RecipeService) {
+  constructor(private recipeService: RecipeService, private route: Router) {
     this.recipeList = this.recipeService.getrecipes();
   }
+
   addrecipie() {
-    this.recipeService.addrecipie(this.obj);
+    this.recipeService
+      .addrecipie(this.obj)
+      .then(() => this.route.navigate(['home']));
   }
 }

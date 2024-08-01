@@ -135,8 +135,10 @@ onSubmit() {
   }
 
   addrecipie() {
-    this.recipeService.addrecipie(this.obj);
+    this.recipeService
+      .addrecipie(this.obj)
+      .then(() => this.router.navigate(['home']));
   }
     
+   }
 
-}

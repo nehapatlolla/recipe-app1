@@ -60,6 +60,14 @@ export class VegComponent {
     this.shown = !this.shown;
   }
 
+  // @Input() id!: string;
+  @Output() deleteRecipieEvent = new EventEmitter<any>();
+
+  // show = true;
+  // deleteMovie() {
+  //   console.log('Child ❌', this.movie);
+  //   this.deleteMovieEvent.emit(this.movie);
+  // }
   deleteRecioe() {
     console.log('deleting the recipe', this.recipes);
     this.deleteRecipeEvent.emit(this.recipes);

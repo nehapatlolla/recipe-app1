@@ -10,5 +10,8 @@
       />
     </mat-form-field>
   </div>
-  <app-nonveg [RecipeList]="filteredRecipes" />
+  <app-nonveg
+    [RecipeList]="filteredRecipes"
+    (deleteRecipieEventN)="deleteRecioeP($event)"
+  />
 </div>

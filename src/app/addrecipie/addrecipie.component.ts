@@ -8,6 +8,7 @@ import { RecipeService } from '../recipe.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
 import { NgIf } from '@angular/common';
+import { MatOption } from '@angular/material/core';
 
 
 @Component({
@@ -23,19 +24,34 @@ import { NgIf } from '@angular/common';
     ReactiveFormsModule,
     MatRadioModule,
     MatRadioButton,
-    NgIf
+    NgIf,
+    MatOption
   ],
   templateUrl: './addrecipie.component.html',
   styleUrl: './addrecipie.component.scss',
 })
-
-
-
 export class AddrecipieComponent {
+  CUISINES: { label: string; value: string }[] = [
+    { label: 'Italian', value: 'italian' },
+    { label: 'Chinese', value: 'chinese' },
+    { label: 'Mexican', value: 'mexican' },
+    { label: 'Indian', value: 'indian' },
+    { label: 'Japanese', value: 'japanese' },
+    { label: 'French', value: 'french' },
+    { label: 'Thai', value: 'thai' },
+    { label: 'Greek', value: 'greek' },
+    { label: 'Spanish', value: 'spanish' },
+    { label: 'Middle Eastern', value: 'middle-eastern' },
+    { label: 'Korean', value: 'korean' },
+    { label: 'American', value: 'american' },
+    { label: 'Vietnamese', value: 'vietnamese' },
+    { label: 'Caribbean', value: 'caribbean' },
+    { label: 'Ethiopian', value: 'ethiopian' },
+  ];
   [x: string]: any;
   recipeList: any;
   name: any;
-  poster:any;
+  poster: any;
   rating: any;
   steps: any;
   ingredients: any;
@@ -51,13 +67,13 @@ export class AddrecipieComponent {
   
     
   };
-  recipeForm:FormGroup;
+  recipeForm: FormGroup;
   constructor(
     private recipeService: RecipeService,
     private router: Router,
     private fb: FormBuilder,
     private route: ActivatedRoute
-   ) {
+  ) {
     this.recipeList = this.recipeService.getrecipes();
   
     
@@ -65,49 +81,46 @@ export class AddrecipieComponent {
   //   this.recipeService.addrecipie(this.obj);
   // }
 
+    // addrecipie() {
+    //   this.recipeService.addrecipie(this.obj);
+    // }
 
- // formGroup -> formControlName
- this.recipeForm = this.fb.group({
- 
-  title: ['', [Validators.required, Validators.minLength(2)]],
-  poster: [
-    '',
-    [
-      Validators.required,
-      Validators.minLength(10),
-      Validators.pattern(/^https:.*/),
-    ],
-  ],
-  procedure: ['', [Validators.required, Validators.minLength(3)]],
-  rating: [
-    '',
-    [Validators.required, Validators.min(1), Validators.max(10)],
-  ],
-  timetaken: '',
-  type: ['', [Validators.required, Validators.minLength(3)]],
-  category:[''],
-  ingredients:['', [Validators.required, Validators.minLength(2)]]
-});
-}
+    // formGroup -> formControlName
+    this.recipeForm = this.fb.group({
+      title: ['', [Validators.required, Validators.minLength(2)]],
+      poster: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(10),
+          Validators.pattern(/^https:.*/),
+        ],
+      ],
+      procedure: ['', [Validators.required, Validators.minLength(3)]],
+      rating: [
+        '',
+        [Validators.required, Validators.min(1), Validators.max(10)],
+      ],
+      timetaken: '',
+      type: ['', [Validators.required, Validators.minLength(3)]],
+      category: ['', [Validators.required, Validators.minLength(2)]],
+      ingredients: ['', [Validators.required, Validators.minLength(2)]],
+      cuisine: ['', Validators.required],
+    });
+  }
 
+  onSubmit() {
+    console.log(this.recipeForm.value);
+    // Todo: Fix Add - Technical Debt
 
-onSubmit() {
-  console.log(this.recipeForm.value);
-  // Todo: Fix Add - Technical Debt
+    if (this.recipeForm.valid) {
+      let newrecipe: any = this.recipeForm.value;
+      this.recipeService.addrecipie(newrecipe);
 
-  if (this.recipeForm.valid) {
-    let newrecipe:any = this.recipeForm.value;
-    this.recipeService.addrecipie(newrecipe)
-    
       // Move to movies page
       this.router.navigate(['home']);
-
+    }
   }
-}
-
-
-
-  
 
   get title() {
     return this.recipeForm.get('title');
@@ -117,7 +130,6 @@ onSubmit() {
     return this.recipeForm.get('poster');
   }
 
-  
   get procedure() {
     return this.recipeForm.get('procedure');
   }

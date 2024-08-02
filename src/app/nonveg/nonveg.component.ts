@@ -23,12 +23,14 @@ export class NonvegComponent {
   //   this.movieService.deleteMovie(movie).then(() => this.loadMovies());
   // }
   deleteRecioeP(recipe: any) {
+    console.log('non--veg');
     console.log(recipe);
     console.log(recipe.id);
+    this.deleteRecipieEventN.emit(recipe);
+
     // this.recipeService
     //   .deleterecipie(recipe.id)
     //   .then((res) => (this.RecipeList = res));
-    this.deleteRecipieEventN.emit(recipe);
     // this.recipeService.deleterecipie(recipe.id).then(() => this.loadRecipes());
   }
 }

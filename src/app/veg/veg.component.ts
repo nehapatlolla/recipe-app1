@@ -71,6 +71,8 @@ export class VegComponent {
   deleteRecioe() {
     console.log('deleting the recipe', this.recipes);
     this.deleteRecipeEvent.emit(this.recipes);
+    console.log('deleting the recipe', this.recipes);
+
     // this.recipeService.deleterecipie(this.recipes);
   }
   like = 0;

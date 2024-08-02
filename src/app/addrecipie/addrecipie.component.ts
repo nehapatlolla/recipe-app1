@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { RecipeService } from '../recipe.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
+import { NgIf } from '@angular/common';
 
 
 @Component({
@@ -21,7 +22,8 @@ import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
     FormsModule,
     ReactiveFormsModule,
     MatRadioModule,
-    MatRadioButton
+    MatRadioButton,
+    NgIf
   ],
   templateUrl: './addrecipie.component.html',
   styleUrl: './addrecipie.component.scss',
@@ -46,7 +48,7 @@ export class AddrecipieComponent {
     type: '',
     rating: 0,
     category: '',
-
+  
     
   };
   recipeForm:FormGroup;
@@ -58,6 +60,7 @@ export class AddrecipieComponent {
    ) {
     this.recipeList = this.recipeService.getrecipes();
   
+    
   // addrecipie() {
   //   this.recipeService.addrecipie(this.obj);
   // }
@@ -82,7 +85,7 @@ export class AddrecipieComponent {
   ],
   timetaken: '',
   type: ['', [Validators.required, Validators.minLength(3)]],
-  category:['', [Validators.required, Validators.minLength(2)]],
+  category:[''],
   ingredients:['', [Validators.required, Validators.minLength(2)]]
 });
 }
@@ -145,5 +148,7 @@ onSubmit() {
       .then(() => this.router.navigate(['home']));
   }
     
+  
+  
    }
 

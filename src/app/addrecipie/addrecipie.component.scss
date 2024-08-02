@@ -72,3 +72,7 @@ align-items: center
     max-width: 400px;
     margin: 16px auto;
   }
+  .category{
+    display:flex;
+    flex-direction: column;
+  }

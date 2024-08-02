@@ -17,7 +17,7 @@ export const routes: Routes = [
   },
 
   { path: 'home', component: HomeComponent },
-  { path: 'recipes', component: RecipeComponent },
+  { path: 'recipes/:id', component: RecipeComponent },
   {
     path: 'addrecipe',
     component: AddrecipieComponent,
@@ -25,9 +25,5 @@ export const routes: Routes = [
   {
     path: '**',
     component: ErrorComponent,
-  },
-  {
-    path: 'recipe/:id',
-    component: RecipeComponent,
   },
 ];

@@ -9,7 +9,7 @@
         <button
           mat-icon-button
           aria-label="Example icon button with a vertical three dot icon"
-          routerLink="/recipe/{{ id }}"
+          routerLink="/recipes/{{ id }}"
         >
           <mat-icon>info</mat-icon>
         </button>
@@ -64,6 +64,13 @@
             ></mat-icon>
           </button>
         </div>
+        <button
+          mat-icon-button
+          aria-label="Example icon button with a vertical three dot icon"
+          routerLink="/recipes/{{ id }}"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
         <div class="deletes">
           <mat-icon
             (click)="deleteRecioe()"

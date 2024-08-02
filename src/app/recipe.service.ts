@@ -526,8 +526,12 @@ export class RecipeService {
       }
     ).then((res) => res.json());
   }
-  getRecipeById(recipe: any) {
-    return this.ReciepsList;
+  getRecipeById(id: any) {
+    console.log(id);
+    return fetch(
+      `https://669a42939ba098ed61fef782.mockapi.io/ReciepsList/${id}`
+    ).then((data) => data.json());
+    // return this.ReciepsList;
   }
   getRecipeByIdx(idx: any) {
     return this.ReciepsList[idx];

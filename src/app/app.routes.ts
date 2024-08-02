@@ -4,6 +4,7 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { ErrorComponent } from './error/error.component';
 import { AddrecipieComponent } from './addrecipie/addrecipie.component';
 import { BasicComponent } from './basic/basic.component';
+import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,7 @@ export const routes: Routes = [
   },
 
   { path: 'home', component: HomeComponent },
+  { path: 'recipes/edit/:id', component: EditRecipeComponent },
   { path: 'recipes/:id', component: RecipeComponent },
   {
     path: 'addrecipe',

@@ -76,6 +76,6 @@ export class HomeComponent {
     this.recipeService.deleterecipie(recipe.id).then(() => this.loadRecipes());
   }
   editRecioeP(recipe: any) {
-    // this.route.navigate(`edit-Recipe/${recipe.id}`);
+    this.route.navigate([`recipes/edit/${recipe.id}`]);
   }
 }

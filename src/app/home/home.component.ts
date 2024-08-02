@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { NonvegComponent } from '../nonveg/nonveg.component';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -38,7 +39,11 @@ export class HomeComponent {
   recipes: any = [];
   filteredRecipes: Recipe[] = [];
 
-  constructor(private recipeService: RecipeService) {
+  constructor(
+    private recipeService: RecipeService,
+    private router: ActivatedRoute,
+    private route: Router
+  ) {
     // this.recipes = this.recipeService.getrecipes();
   }
 
@@ -69,5 +74,8 @@ export class HomeComponent {
   }
   deleteRecioeP(recipe: any) {
     this.recipeService.deleterecipie(recipe.id).then(() => this.loadRecipes());
+  }
+  editRecioeP(recipe: any) {
+    // this.route.navigate(`edit-Recipe/${recipe.id}`);
   }
 }

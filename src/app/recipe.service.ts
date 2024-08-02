@@ -527,6 +527,7 @@ export class RecipeService {
     ).then((res) => res.json());
   }
   getRecipeById(id: any) {
+    console.log(id);
     return fetch(
       `https://669a42939ba098ed61fef782.mockapi.io/ReciepsList/${id}`
     ).then((data) => data.json());

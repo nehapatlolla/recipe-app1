@@ -38,10 +38,12 @@ export class RecipeComponent {
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id') as string;
     console.log(id);
-    this.recipeServie.getRecipeById(id).then((data: any) => {
-      this.Recipes = data;
-      this.isLoading = false;
-    });
+    this.Recipes = this.recipeServie.getRecipeById(id);
+    //  .then((data: any) => {
+    //     console.log(data);
+    //     this.Recipes = data;
+    //     this.isLoading = false;
+    //   });
     console.log(this.Recipes);
     // this.movieService.getMoviesByIdp(id).then((data) => {
     //   this.Movies = data;

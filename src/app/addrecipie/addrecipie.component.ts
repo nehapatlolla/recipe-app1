@@ -5,16 +5,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { RecipeService } from '../recipe.service';
-import {
-  FormBuilder,
-  FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { MatOptionModule } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
+import { NgIf } from '@angular/common';
+import { MatOption } from '@angular/material/core';
+
 
 @Component({
   selector: 'app-addrecipie',
@@ -27,9 +22,10 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatOptionModule,
-    MatSelectModule,
-    CommonModule,
+    MatRadioModule,
+    MatRadioButton,
+    NgIf,
+    MatOption
   ],
   templateUrl: './addrecipie.component.html',
   styleUrl: './addrecipie.component.scss',
@@ -68,6 +64,8 @@ export class AddrecipieComponent {
     type: '',
     rating: 0,
     category: '',
+  
+    
   };
   recipeForm: FormGroup;
   constructor(
@@ -77,6 +75,11 @@ export class AddrecipieComponent {
     private route: ActivatedRoute
   ) {
     this.recipeList = this.recipeService.getrecipes();
+  
+    
+  // addrecipie() {
+  //   this.recipeService.addrecipie(this.obj);
+  // }
 
     // addrecipie() {
     //   this.recipeService.addrecipie(this.obj);
@@ -156,4 +159,8 @@ export class AddrecipieComponent {
       .addrecipie(this.obj)
       .then(() => this.router.navigate(['home']));
   }
-}
+    
+  
+  
+   }
+

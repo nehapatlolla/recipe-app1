@@ -82,17 +82,22 @@
     <mat-label>Recipe Category</mat-label>
     <input matInput placeholder="Category" formControlName="category" />
 
-    @if(category?.touched && category?.hasError('required') ){
-    <mat-error>category is <strong>required</strong></mat-error>
-    } @if(category?.touched && category?.hasError('minlength') ){
-    <mat-error>Please provide full recipe category 😁</mat-error>
-    }
-  </mat-form-field>
-  <br />
+    
+     <div class="category">
+      
+      <mat-radio-group aria-label="Category" formControlName="category" >
+        <mat-label>Category</mat-label>
+        <mat-radio-button value="1">Veg</mat-radio-button>
+        <mat-radio-button value="2">Non-Veg</mat-radio-button>
+      </mat-radio-group>
+      
 
-  <mat-form-field>
-    <mat-label>Recipe ingredients</mat-label>
-    <input matInput placeholder="Ingredients" formControlName="ingredients" />
+
+
+     
+      </div>
+    
+    <br />
 
     @if(ingredients?.touched && ingredients?.hasError('required') ){
     <mat-error>ingredients is <strong>required</strong></mat-error>

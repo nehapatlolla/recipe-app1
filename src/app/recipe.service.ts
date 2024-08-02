@@ -513,14 +513,14 @@ export class RecipeService {
       },
     }).then((res) => res.json());
   }
-  deleterecipie(id: any) {
+  deleterecipie(recipe: any) {
     console.log('servie component..');
-    console.log(id);
+    console.log(recipe.id);
 
     // let idx = this.ReciepsList.indexOf(recipe);
     // this.ReciepsList.splice(idx, 1);
     return fetch(
-      `https://669a42939ba098ed61fef782.mockapi.io/ReciepsList/${id} `,
+      `https://669a42939ba098ed61fef782.mockapi.io/ReciepsList/${recipe.id} `,
       {
         method: 'DELETE',
       }

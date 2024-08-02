@@ -15,6 +15,7 @@ export class NonvegComponent {
   isLoading: boolean = true;
   msg = '';
   @Output() deleteRecipieEventN = new EventEmitter<any>();
+  @Output() editRecipieEventN = new EventEmitter<any>();
   constructor(private recipeService: RecipeService) {
     // this.RecipeList = this.recipeService.getrecipes();
   }
@@ -27,10 +28,14 @@ export class NonvegComponent {
     console.log(recipe);
     console.log(recipe.id);
     this.deleteRecipieEventN.emit(recipe);
-
     // this.recipeService
     //   .deleterecipie(recipe.id)
     //   .then((res) => (this.RecipeList = res));
     // this.recipeService.deleterecipie(recipe.id).then(() => this.loadRecipes());
+  }
+
+  editRecipe(recipe: Event) {
+    console.log('editing the recipe');
+    this.editRecipieEventN.emit(recipe);
   }
 }

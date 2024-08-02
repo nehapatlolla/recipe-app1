@@ -53,7 +53,7 @@ export class VegComponent {
   show: boolean = false;
   showRecipe: boolean = false;
   @Output() deleteRecipeEvent = new EventEmitter<any>();
-  // @Output() editMovieEvent = new EventEmitter<any>();
+  @Output() editMovieEvent = new EventEmitter<any>();
 
   clickmethod() {
     this.show = !this.show;
@@ -66,6 +66,7 @@ export class VegComponent {
 
   // @Input() id!: string;
   @Output() deleteRecipieEvent = new EventEmitter<any>();
+  @Output() editRecipieEvent = new EventEmitter<any>();
 
   // show = true;
   // deleteMovie() {
@@ -73,6 +74,7 @@ export class VegComponent {
   //   this.deleteMovieEvent.emit(this.movie);
   // }
   deleteRecioe() {
+    this.recipeService.deleterecipie(this.recipes);
     console.log('deleting the recipe', this.recipes);
     this.deleteRecipeEvent.emit(this.recipes);
     console.log('deleting the recipe', this.recipes);
@@ -93,5 +95,6 @@ export class VegComponent {
   }
   editRecipe() {
     console.log('edit woriking');
+    this.editRecipieEvent.emit(this.recipes);
   }
 }

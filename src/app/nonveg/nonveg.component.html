@@ -1,13 +1,13 @@
 <div class="main">
   @for (recipe of RecipeList ; track $index) {
   <app-veg
-    [recipes]="recipe"
-    (deleteRecipieEvent)="deleteRecioeP($event)"
     [id]="recipe.id"
+    [recipes]="recipe"
+    (deleteRecipeEvent)="deleteRecioeP($event)"
+    (editRecipieEvent)="editRecipe($event)"
   />
   }
 </div>
-
 <!-- [movie]="movie"
     (deleteMovieEvent)="deleteMovieP($event)"
     [id]="movie.id"

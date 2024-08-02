@@ -7,6 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
 import { Router, RouterLink } from '@angular/router';
 import { RecipeComponent } from '../recipe/recipe.component';
+import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 
 @Component({
   selector: 'app-veg',
@@ -18,6 +20,8 @@ import { RecipeComponent } from '../recipe/recipe.component';
     MatBadgeModule,
     RecipeComponent,
     RouterLink,
+    FormsModule,
+    MatRadioModule,
   ],
   templateUrl: './veg.component.html',
   styleUrl: './veg.component.scss',

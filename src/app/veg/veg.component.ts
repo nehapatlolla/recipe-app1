@@ -87,4 +87,7 @@ export class VegComponent {
     console.log('showing...');
     this.showRecipe = !this.showRecipe;
   }
+  editRecipe() {
+    console.log('edit woriking');
+  }
 }

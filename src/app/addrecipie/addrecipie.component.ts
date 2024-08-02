@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { RecipeService } from '../recipe.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatRadioButton, MatRadioModule } from '@angular/material/radio';
 
 
 @Component({
@@ -19,11 +20,15 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-  
+    MatRadioModule,
+    MatRadioButton
   ],
   templateUrl: './addrecipie.component.html',
   styleUrl: './addrecipie.component.scss',
 })
+
+
+
 export class AddrecipieComponent {
   [x: string]: any;
   recipeList: any;

@@ -1,5 +1,5 @@
 <div class="main">
   @for (recipe of RecipeList ; track $index) {
-  <app-veg [recipes]="recipe" />
+  <app-veg [recipes]="recipe" [id]="recipe.id" />
   }
 </div>

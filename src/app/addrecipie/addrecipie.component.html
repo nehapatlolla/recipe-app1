@@ -47,8 +47,8 @@
   <mat-form-field>
     <mat-label>Cuisine</mat-label>
     <mat-select formControlName="cuisine">
-      <mat-option *ngFor="let cuisine of CUISINES" [value]="cuisine.value">
-        {{ cuisine.label }}
+      <mat-option *ngFor="let cs of CUISINES" [value]="cs.value">
+        {{ cs.label }}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -82,21 +82,14 @@
     <mat-label>Recipe Category</mat-label>
     <input matInput placeholder="Category" formControlName="category" />
 
-    
-     <div class="category">
-      
-      <mat-radio-group aria-label="Category" formControlName="category" >
+    <div class="category">
+      <mat-radio-group aria-label="Category" formControlName="category">
         <mat-label>Category</mat-label>
         <mat-radio-button value="1">Veg</mat-radio-button>
         <mat-radio-button value="2">Non-Veg</mat-radio-button>
       </mat-radio-group>
-      
+    </div>
 
-
-
-     
-      </div>
-    
     <br />
 
     @if(ingredients?.touched && ingredients?.hasError('required') ){
